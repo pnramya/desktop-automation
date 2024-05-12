@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sku Flow">
+	<test thread-count="5" name="Create Category SubCat Brand">
+		<parameter name="userName" value="apm" />
+		<parameter name="passWord" value="apm" />
+		<classes>
+			<class name="script.CreateCategorySubCatBrand" />
+		</classes>
+	</test>
+
+	<test thread-count="5" name="Create Sku And Add Certificate">
+		<parameter name="userName" value="apm" />
+		<parameter name="passWord" value="apm" />
+		<classes>
+			<class name="script.CreateSkuAddCertificate" />
+		</classes>
+	</test>
+	<!--<test thread-count="5" name="Delete Sku Query">
+		<classes>
+			<class name="script.DeleteSkuQuery" />
+		</classes>
+	</test>-->
+	
+</suite>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Indent Flow">
+	<listeners>
+		<listener class-name='script.CustomizedEmailableReport' />
+	</listeners>
+	<test
+		name="StorePersion Regression Test Case Sales To MasterSKU">
+		<parameter name="userName" value="cds" />
+		<parameter name="passWord" value="cds" />
+		<classes>
+			<class name="script.StorePersionRegressionSalesToMasterSKU" />
+		</classes>
+	</test>
+
+	<test
+		name="StorePersion Regression">
+		<parameter name="userName" value="cds" />
+		<parameter name="passWord" value="cds" />
+		<classes>
+			<class name="script.StorePersionRegressionEPToPR" />
+		</classes>
+	</test>
+	
+		<test
+		name="Indent Plan By StorePerson">
+		<parameter name="userName" value="kf" />
+		<parameter name="passWord" value="kf" />
+		<classes>
+			<class name="script.FinanceRegression" />
+		</classes>
+	</test>
+
+
+</suite> 
