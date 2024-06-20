@@ -406,7 +406,7 @@ public class AddSales extends WebBase {
 	public void addDenomination() {
 		try {
 			DenominationPage denominationPage = new DenominationPage(driver);
-			denominationPage.clickEodCashDeclarationTab();
+			//denominationPage.clickEodCashDeclarationTab();
 			int closingCashBalance = Integer.parseInt(denominationPage.getClosingCashBalance());
 			logger.log(Level.INFO, "denomination.getClosingCashBalance()" + denominationPage.getClosingCashBalance());
 			denominationPage.clickAddDenominationButton();

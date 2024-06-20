@@ -97,6 +97,37 @@ extends WebBase{
 	@FindBy(name = "Clear")
 	private WebElement clearText;
 	
+	@WindowsFindBy(accessibility = "txtSalesInvoiceNoId")
+	private WebElement invoiceNumber;
+	
+	@WindowsFindBy(accessibility = "tbSalesProductDetailsSellingPriceId")
+	private WebElement sellingPrice;
+	
+	@FindBy(name = "EOD (Cash Declaration)")
+	private WebElement eodCashDeclaration;
+	
+	@WindowsFindBy(accessibility = "lblwelcome")
+	private WebElement storename;
+	
+	public String getStoreName() 
+	{
+		return storename.getAttribute("Name");
+	}
+	
+	public void clickEod() 
+	{
+		eodCashDeclaration.click();
+	}
+	
+	public String getSellingPrice() {
+		return sellingPrice.getAttribute("Name");
+	}
+	
+	public String getInvoiceNumber() 
+	{
+		return invoiceNumber.getAttribute("Name");
+	}
+	
 	
 	public String getClearText() {
 		return clearText.getAttribute("Name");
@@ -132,6 +163,9 @@ extends WebBase{
 	}
 	public void saveBtnClick() {
 		saveButton.click();
+	}
+	public WebElement getSavebutton() {
+		return saveButton;
 	}
 	public void viewSalesLinkClick() {
 		viewSalesLink.click();

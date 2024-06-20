@@ -22,7 +22,7 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>MasterIndentFlow.xml</suiteXmlFile>
+						<suiteXmlFile>./TestngXmlFiles/InvoiceValidate.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
@@ -81,13 +81,16 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.7</version>
 		</dependency>
-		
-
 			<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 		<artifactId>mssql-jdbc</artifactId>
 			<version>6.4.0.jre8</version>
 		</dependency>
+		<dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.26</version>
+        </dependency>
 	</dependencies>
 
 </project>

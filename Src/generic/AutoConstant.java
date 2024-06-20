@@ -12,6 +12,10 @@ public interface AutoConstant {
 	String CreateSupplier_PATH = "./data/CreateSupplier.properties";
 	String Regression_PATH="./data/REGRESSION.properties";
 	String APP_PATH ="C:\\Program Files (x86)\\Suggi\\FalcaPOS.exe";
+	String WRITE_PATH_2="./data/BarcodeWriteForInv.properties";
+	String PREVIOUS_INV="./data/previousInv.properties";
+	
+	String PRE_PROD_PATH="C:\\Program Files (x86)\\Suggi Pre Prod\\FalcaPOS.exe";
 	String WinDriver_Path = System.getProperty("user.dir") + "\\driver\\WinAppDriver.exe";
 	String username = "txtLoginUserNameId";
 	String password = "txtLoginUserPasswordId";
@@ -19,6 +23,7 @@ public interface AutoConstant {
 	String xlsPath = "C:\\SuggiTestData\\SBIBulk.xlsx";
 	String pdfPath = "C:\\SuggiTestData\\ConsumerFlow.png";
 	String batchFilePath = "C:\\SuggiTestData\\batchfile.bat";
+	String datProviderExcel="./data/Store cred .xlsx";
 	
 	// Db Data
 	String serverName = "172.26.1.14";

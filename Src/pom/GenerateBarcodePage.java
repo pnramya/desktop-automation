@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import generic.WebBase;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.WindowsBy;
 import io.appium.java_client.pagefactory.WindowsFindBy;
 import io.appium.java_client.windows.WindowsDriver;
 
@@ -53,6 +54,21 @@ public class GenerateBarcodePage extends WebBase{
 
 	@WindowsFindBy(accessibility = "txStockGenrateBarcodeBarcodeNoId")
 	private WebElement getBarcode;
+	
+	@WindowsFindBy(accessibility = "CellElement_0_12")
+	private WebElement barcodeFirstPrintButton;
+	
+	@WindowsFindBy(accessibility = "AvailableUnits")
+	private WebElement availableQtyFilter;
+	
+	public WebElement getAvailableqtyFilt() 
+	{
+		return availableQtyFilter;
+	}
+	
+	public WebElement getFirstBarPrintButton() {
+		return barcodeFirstPrintButton;
+	}
 	
 	public String getBarcode() {
 		return getBarcode.getAttribute("Name");

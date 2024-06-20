@@ -42,6 +42,37 @@ public class Lib {
 		pr.store(fis, "Test Data");
 		fis.close();
 	}
+	public static void writeProp2(String key, String value) throws IOException {
+
+		String path = "./data/BarcodeWriteForInv.properties";
+		File file = new File(path);
+		file.createNewFile();
+		Properties pr = new Properties();
+		// load existing properties
+		pr.load(new FileInputStream(path));
+		// check key and value
+		if ((key != null) && (value != null)) {
+			pr.setProperty(key, value);
+		}
+		FileOutputStream fis = new FileOutputStream(path);
+		pr.store(fis, "Test Data");
+		fis.close();
+	}
+	public static void writePropToAnyFile(String path,String key, String value) throws IOException {
+
+		File file = new File(path);
+		file.createNewFile();
+		Properties pr = new Properties();
+		// load existing properties
+		pr.load(new FileInputStream(path));
+		// check key and value
+		if ((key != null) && (value != null)) {
+			pr.setProperty(key, value);
+		}
+		FileOutputStream fis = new FileOutputStream(path);
+		pr.store(fis, "Test Data");
+		fis.close();
+	}
 	
 	
 	public static void writeList(String key, List<String> randomSupplierNames) throws IOException {

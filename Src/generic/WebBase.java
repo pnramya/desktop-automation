@@ -5,13 +5,16 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.aspectj.lang.annotation.After;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.windows.WindowsDriver;
 import pom.LoginPage;
@@ -22,7 +25,7 @@ public class WebBase implements AutoConstant {
 	private ProcessBuilder server;
 
 	@Parameters({ "userName", "passWord" })
-	@BeforeClass
+	@BeforeMethod
 	public void openApplication(String usn, String pwd) throws InterruptedException, IOException {
 
 		Runtime.getRuntime().exec("taskkill /F /IM <WinAppDriver>.exe");
@@ -52,7 +55,7 @@ public class WebBase implements AutoConstant {
 		}
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void closeApplication() throws InterruptedException {
 		Thread.sleep(2000);
 		driver.quit();
